@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_idle_detector/flutter_idle_detector.dart';
+import 'package:flutter_idle_detector/flutter_user_idle.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return IdleDetector(
-      timeout: const Duration(seconds: 60 * 5),
+      timeout: const Duration(seconds: 10),
       onIdle: () {
         debugPrint("🔴 User is IDLE");
         setState(() {
